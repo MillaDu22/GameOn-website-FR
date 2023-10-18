@@ -40,10 +40,6 @@
           <button class="btn-signup modal-btn">
             je m'inscris
           </button>
-        <!--Message de confirmation d'inscription-->
-        <span class = "registration-msg">
-          <p class ="txt-msg-reg">Merci! Votre réservation a bien été reçue.</p>
-        </span>
         </div>
         <div class="hero-img">
           <img src="./bg_img.jpg" alt="img" />
@@ -57,7 +53,10 @@
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
-            <form name="reserve" action="index.html" method="get" onsubmit="return validate();">
+            <div id="message">
+              <p>Merci! Votre réservation a bien été enregistrée.</p>
+            </div>
+            <form name="reserve" action="index.html" method="get" onsubmit="validateForm(event);">
 <!--Structure des inputs-->              
               <div class="formData">
                 <label for ="first">Prénom</label><br>

@@ -334,17 +334,19 @@ input[data-error]::after {
   border: 0;
 }
 /*Messsage registration*/
-.registration-msg {
+#message {
+  position:relative;
+  margin-top:20px;
   display: none;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color:#fe142f;
   border-radius: 7px;
 }
 .txt-msg-reg {
   position: relative;
   margin:0 auto;
-  color:green;
+  color:red;
   text-align: left;
 }
 /* custom select styles */
