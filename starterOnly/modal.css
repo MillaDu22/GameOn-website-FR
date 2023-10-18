@@ -92,7 +92,7 @@ img {
 
 
 
- @media screen and (max-width: 540px) {
+@media screen and (max-width: 540px) {
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
@@ -333,6 +333,20 @@ input[data-error]::after {
   cursor: pointer;
   border: 0;
 }
+/*Messsage registration*/
+.registration-msg {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+}
+.txt-msg-reg {
+  position: relative;
+  margin:0 auto;
+  color:green;
+  text-align: left;
+}
 /* custom select styles */
 .custom-select {
   position: relative;
@@ -510,6 +524,20 @@ footer {
     display: block;
     margin: 32px auto 10px;
     padding: 12px 35px;
+  }
+  /*message de confirmation d'inscription*/
+  .registration-msg {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color:green;
+    border-radius: 7px;
+  }
+  .txt-msg-reg {
+    position: relative;
+    margin:0 auto;
+    color:white;
+    text-align: left;
   }
   .copyrights {
     margin-top: 50px;
