@@ -53,30 +53,34 @@
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
-            <div id="message">
-              <p>Merci! Votre réservation a bien été enregistrée.</p>
-            </div>
-            <form name="reserve" action="index.html" method="get" onsubmit="validateForm(event);">
+<!--Message validation inscription-->            
+            <div id="message"></div>
+            <form name="reserve" action="index.html" method="get" onsubmit="validateForm(event);" novalidate>
 <!--Structure des inputs-->              
               <div class="formData">
                 <label for ="first">Prénom</label><br>
                 <input class="text-control" type="text" id="first" name="first" minlength="2" required/><br>
+                <div id="error-first"></div>
               </div>
               <div class="formData">
                 <label for="last">Nom</label><br>
                 <input class="text-control" type="text" id="last" name="last" minlength="2" required/><br>
+                <div id="error-last"></div>
               </div>
               <div class="formData">
                 <label for="email">E-mail</label><br>
                 <input class="text-control" type="email" id="email" name="email" required/><br>
+                <div id="error-email"></div>
               </div>
               <div class="formData">
                 <label for="birthdate">Date de naissance</label><br>
                 <input class="text-control" type="date" id="birthdate" name="birthdate" required/><br>
+                <div id="error-birthdate"></div>
               </div>
               <div class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" required/>
+                <div id="error-quantity"></div>
               </div>
 <!--Structure des boutons radio-->           
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
@@ -105,6 +109,7 @@
                 <label class="checkbox-label" for="location6">
                   <span class="checkbox-icon"></span>Portland
                 </label>
+                <div id="error-location"></div>
               </div>
 <!-- Structure coches-->
               <div class="formData">
@@ -113,6 +118,7 @@
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
+                <div id="error-CU"></div>
                 <br>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
