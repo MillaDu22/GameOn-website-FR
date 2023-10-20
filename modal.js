@@ -6,12 +6,24 @@ function editNav() {
     x.className = "topnav";
   }
 }
+// Fonction pour rendre actif le bouton cliqué
+const buttons = document.querySelectorAll('.btnFilter');
+function activeBtn(e) {
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+    });
+    e.currentTarget.classList.add('active');
+}
+buttons.forEach(btn => {
+    btn.addEventListener('click', activeBtn);
+});
 
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeX = document.querySelector(".close");
+const closeBtnMsg = document.querySelector(".btn-close");
 
 // Réinitialisation du formulaire après fermeture de la modale
 function resetForm(){
@@ -59,6 +71,18 @@ function closeModal() {
   });
 }
 closeModal();
+
+//Close msg with button
+function closeMsg() {
+  closeBtnMsg.addEventListener('click', function(e) {
+    e.preventDefault();
+    modalbg.style.display="none";
+    closeBtnMsg.style.display="none";
+    resetForm();
+  });
+}
+closeMsg();
+
 
 //Validation du formulaire
 function validateForm(event) {
@@ -171,6 +195,7 @@ function validateForm(event) {
   }
   if (valid) {
     // Création du message de conformation d'inscription dans la div id message
+    const btnToClose = document.querySelector('.btn-close');
     const validationMessage = document.createElement('div');
     validationMessage.textContent = "Merci! Votre réservation a bien été enregistrée.";
     validationMessage.classList.add('validation-message');
@@ -179,6 +204,7 @@ function validateForm(event) {
     document.querySelector('form[name="reserve"]').style.display = "none";
     const modalBody = document.querySelector('.modal-body');
     modalBody.appendChild(validationMessage);
+    document.querySelector('.btn-close').style.display="block";
   }
 }
 //Vérification si chaîne de caractères email correspond à un format valide avec une expression régulière regex
