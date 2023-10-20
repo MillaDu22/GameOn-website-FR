@@ -87,6 +87,11 @@ img {
   font-family: Roboto, sans-serif;
 }
 
+.btnFilter:hover {
+  background-color: rgb(230, 0, 0);
+  color:white;
+  border-radius: 8px;
+}
 a.active{
   background-color: rgb(230, 0, 0);
   color:white;
@@ -503,7 +508,7 @@ input {
   color: rgb(230, 0, 0);
   padding: 0;
   font-size: 1rem;
-  margin: 60px 0 30px;
+  margin: 10px 0 30px;
   font-weight: bolder;
 }
 
@@ -651,6 +656,9 @@ footer {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+  }
+  span {
+    font-size: 1rem;
   }
 
   .topnav a {display: none;}
