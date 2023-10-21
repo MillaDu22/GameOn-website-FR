@@ -6,6 +6,7 @@ function editNav() {
     x.className = "topnav";
   }
 }
+editNav();
 // Fonction pour rendre actif le bouton cliqué
 const buttons = document.querySelectorAll('.btnFilter');
 function activeBtn(e) {
@@ -21,7 +22,6 @@ buttons.forEach(btn => {
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
 const closeX = document.querySelector(".close");
 const closeBtnMsg = document.querySelector(".btn-close");
 
@@ -194,8 +194,7 @@ function validateForm(event) {
     messageErrorCU.style.display="none";
   }
   if (valid) {
-    // Création du message de conformation d'inscription dans la div id message
-    const btnToClose = document.querySelector('.btn-close');
+    // Création du message de conformation d'inscription dans la div id messages
     const validationMessage = document.createElement('div');
     validationMessage.textContent = "Merci! Votre réservation a bien été enregistrée.";
     validationMessage.classList.add('validation-message');
@@ -207,6 +206,8 @@ function validateForm(event) {
     document.querySelector('.btn-close').style.display="block";
   }
 }
+validateForm();
+
 //Vérification si chaîne de caractères email correspond à un format valide avec une expression régulière regex
 function isValidEmail(email) {
   //Correspondance caractères alphanumériques
