@@ -47,7 +47,7 @@ function resetForm(){
   }
 
 }
-
+// Réinitialisation des messages d'erreurs
 function resetErrors() {
   const errorMessages = document.querySelectorAll('.error-msg');
   errorMessages.forEach(message => message.style.display = 'none');

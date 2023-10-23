@@ -528,6 +528,11 @@ footer {
     padding:0px;
   }
 
+  .main-navbar {
+    width:100%;
+    padding-top: 10px;
+  }
+
   .hero-section {
     display: block;
     box-shadow: unset;
@@ -593,6 +598,15 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
+  .topnav {
+    width:90%;
+    margin:0 auto;
+    padding-top:0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
@@ -615,8 +629,30 @@ footer {
     display: block;
     text-align: left;
   }
+
+  .header-logo {
+    margin-top:20px;
+    width:103px;
+    height:19px;
+  }
+
+  img {
+    width:103px;
+    height:100%;
+  }
+
   .main-navbar {
-    margin-top:62px;
+    width:45%;
+    margin-top:60px;
+  }
+
+  .hero-section {
+    min-height:480px;
+    height:auto;
+  }
+
+  .hero-content {
+    padding-bottom: 0;
   }
 
   .hero-headline {
@@ -628,6 +664,7 @@ footer {
   .hero-text {
     width: unset;
     font-size: 1.5rem;
+    padding-bottom:40px;
   }
 
   .modal-btn {
@@ -682,11 +719,16 @@ footer {
     height:100%;
   }
 
+  .main-navbar {
+    width:55%
+  }
+
   main {
     width:100%;
     min-width: 320px;
     margin:0 auto;
   }
+
   .close {
     position:absolute;
     top:0px;
@@ -698,7 +740,6 @@ footer {
     background:rgb(230, 0, 0);
     display: flex;
     margin: 0 auto;
-    padding: 2em;
     color: #fff;
     padding: 0.75rem 2.5rem;
     border-radius: 8px;
@@ -712,11 +753,16 @@ footer {
   .hero-section {
     min-width: 320px;
     width:100%;
+    min-height:480px;
+    height:640px;
   }
 
   .hero-content {
     min-width: 320px;
     width:100%;
+  }
+  .hero-text {
+    padding-bottom:30px;
   }
 
   .hero-headline {
@@ -731,6 +777,7 @@ footer {
   .hero-text {
     width:80%;
     margin-left: 5%;
+    margin-bottom: 5px;
     min-width: 320px;
     width: unset;
     font-size: 1rem;
@@ -738,14 +785,25 @@ footer {
 
   .hero-img {
     width:90%;
-    height:100%;
     margin: 0 auto;
+    height:329px;
+  }
+  .hero-img img {
+    width:100%;
+    height:100%;
   }
 
   footer {
+    display: flex;
     width:100%;
     box-sizing: border-box;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-bottom:10%;
+  }
+  .copyrights {
+    margin:0;
   }
 
   .bground {
