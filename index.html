@@ -54,7 +54,7 @@
           <div class="modal-body">
 <!--Message validation inscription-->            
             <div id="message"></div>
-            <form name="reserve" action="index.html" method="get" onsubmit="validateForm(event);" novalidate>
+            <form name="reserve" action="index.html" method="get" novalidate>
 <!--Structure des inputs-->              
               <div class="formData">
                 <label for ="first">Prénom</label><br>
@@ -68,7 +68,7 @@
               </div>
               <div class="formData">
                 <label for="email">E-mail</label><br>
-                <input class="text-control" type="email" id="email" name="email" required><br>
+                <input class="text-control" autocomplete="off" type="email" id="email" name="email" required><br>
                 <div id="error-email"></div>
               </div>
               <div class="formData">

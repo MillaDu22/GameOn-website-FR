@@ -86,9 +86,9 @@ closeMsg();
 
 //Validation du formulaire
 function validateForm(event) {
-  resetErrors();
   // Empêche la soumission du formulaire pour éviter la fermeture de la modale
   event.preventDefault(); 
+  resetErrors();
   // Les éléments du DOM
   const firstName = document.getElementById("first").value;
   const lastName = document.getElementById("last").value;
@@ -104,7 +104,7 @@ function validateForm(event) {
   errorFirst.classList.add('error-msg');
   const messageErrorFirst = document.getElementById('error-first');
   messageErrorFirst.appendChild(errorFirst);
-  console.log(errorFirst)
+
 
   const errorLast = document.createElement('p');
   errorLast.textContent = "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
@@ -204,9 +204,14 @@ function validateForm(event) {
     const modalBody = document.querySelector('.modal-body');
     modalBody.appendChild(validationMessage);
     document.querySelector('.btn-close').style.display="block";
-  }
+  } 
 }
-validateForm();
+//validateForm();
+document.querySelector('form[name="reserve"]').addEventListener('submit', function(event) {
+  validateForm(event);
+});
+
+
 
 //Vérification si chaîne de caractères email correspond à un format valide avec une expression régulière regex
 function isValidEmail(email) {
