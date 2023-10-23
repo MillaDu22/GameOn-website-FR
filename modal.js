@@ -206,7 +206,6 @@ function validateForm(event) {
     document.querySelector('.btn-close').style.display="block";
   } 
 }
-//validateForm();
 document.querySelector('form[name="reserve"]').addEventListener('submit', function(event) {
   validateForm(event);
 });
