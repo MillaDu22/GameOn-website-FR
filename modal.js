@@ -1,4 +1,4 @@
-function editNav() {
+/*function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
@@ -6,7 +6,41 @@ function editNav() {
     x.className = "topnav";
   }
 }
-editNav();
+editNav();*/
+
+
+
+
+
+
+// Fonction pour cacher les boutons .btnFilter par défaut
+function hideFilterButtons() {
+  var x = document.getElementsByClassName("btnFilter");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  hideFilterButtons();
+});
+
+// Function d'affichage des boutons menu
+function editNav() {
+  var x = document.getElementsByClassName("btnFilter");
+  for (var i = 0; i < x.length; i++) {
+    if (x[i].style.display === "block") {
+      x[i].style.display = "none";
+    } else {
+      x[i].style.display = "block";
+    }
+  }
+}
+editNav()
+
+
+
 // Fonction pour rendre actif le bouton cliqué
 const buttons = document.querySelectorAll('.btnFilter');
 function activeBtn(e) {

@@ -706,7 +706,9 @@ footer {
     font-size: 1rem;
   }
 
-  .topnav a {display: none;}
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
