@@ -64,9 +64,9 @@ function launchModal() {
 
 // Close modal form with X
 function closeModal() {
-  closeX.addEventListener('click', function(e) {
-    e.preventDefault();
+  closeX.addEventListener('click', function() {
     modalbg.style.display="none";
+    closeBtnMsg.style.display="none";
     resetForm();
   });
 }
@@ -74,8 +74,7 @@ closeModal();
 
 //Close msg with button
 function closeMsg() {
-  closeBtnMsg.addEventListener('click', function(e) {
-    e.preventDefault();
+  closeBtnMsg.addEventListener('click', function() {
     modalbg.style.display="none";
     closeBtnMsg.style.display="none";
     resetForm();

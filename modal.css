@@ -13,6 +13,7 @@
   color:white;
 }
 
+/*error messages*/
 #error-first, #error-last, #error-email, #error-birthdate, #error-quantity, #error-location, #error-CU {
   display:none;
   justify-content: flex-start;
@@ -20,7 +21,6 @@
   position:relative;
 }
 
-/*error messages*/
 .error-msg {
   color:rgb(230, 0, 0);
   font-size:16px;
@@ -87,11 +87,12 @@ img {
   font-family: Roboto, sans-serif;
 }
 
-.btnFilter:hover {
+/*.btnFilter:hover {
   background-color: rgb(230, 0, 0);
   color:white;
   border-radius: 8px;
-}
+}*/
+
 a.active{
   background-color: rgb(230, 0, 0);
   color:white;
@@ -607,7 +608,10 @@ footer {
     justify-content: space-between;
   }
 
-  .topnav a {display: none;}
+  .topnav a {
+    display: none;
+  }
+
   .topnav a.icon {
     float: right;
     display: block;
@@ -615,7 +619,10 @@ footer {
     font-size:29px;
   }
 
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
+
   .topnav.responsive .icon {
     position: absolute;
     right:0;
