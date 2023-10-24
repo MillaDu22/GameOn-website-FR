@@ -745,6 +745,7 @@ footer {
   .menu {
     width:60%;
   }
+
   .main-navbar {
     width:100%;
   }
@@ -787,6 +788,7 @@ footer {
     min-width: 320px;
     width:100%;
   }
+
   .hero-text {
     padding-bottom:30px;
   }
@@ -814,6 +816,7 @@ footer {
     margin: 0 auto;
     height:329px;
   }
+
   .hero-img img {
     width:100%;
     height:100%;
@@ -828,6 +831,7 @@ footer {
     margin: 0;
     padding-bottom:10%;
   }
+  
   .copyrights {
     margin:0;
   }
