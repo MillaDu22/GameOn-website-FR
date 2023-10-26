@@ -1,3 +1,4 @@
+/**************************************Responsive menu navigation*********************************** */
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -20,11 +21,56 @@ buttons.forEach(btn => {
     btn.addEventListener('click', activeBtn);
 });
 
+/************************************Gestion focus clavier remplissage des champs***************************** */
+
+// Récupération des champs du formulaire dans un tableau
+const formFields = document.querySelectorAll('input[type="text"], input[type="email"], input[type="date"], input[type="number"]');
+
+// Rajout d'un gestionnaire d'événement "keydown" à chaque champ du formulaire
+formFields.forEach((field, index) => {
+  field.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.keyCode === 13) {
+      // Pour passer au champ suivant ou au premier champ si c'est le dernier
+      const nextIndex = (index + 1) % formFields.length;
+      formFields[nextIndex].focus();
+    }
+  });
+});
+
+/************************Gestion message d'erreur au changement sur btn radio et chackbox****************** */
+
+// Récupération checkBox
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// Ajout gestionnaire d'événement "change" à checkbox
+checkboxes.forEach((input) => {
+  input.addEventListener('change', () => {
+    // Eface le msg d'erreur des qu'un bouton est coché
+    const messageErrorCU = document.getElementById('error-CU');
+    messageErrorCU.style.display="none";
+  });
+});
+
+// Récupération des boutons radio dans un tableau
+const checkboxesRadios = document.querySelectorAll('input[type="radio"]');
+
+// Ajout gestionnaire d'événement "change" à chaque bouton radio
+checkboxesRadios.forEach((input) => {
+  input.addEventListener('change', () => {
+        // Eface le msg d'erreur des qu'un bouton est coché
+    const messageErrorLocation = document.getElementById('error-location');
+    messageErrorLocation.style.display="none";
+  });
+});
+
+
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const closeX = document.querySelector(".close");
 const closeBtnMsg = document.querySelector(".btn-close");
+
+/******************************************Les Réinitialisations****************************************** */
 
 // Réinitialisation du formulaire après fermeture de la modale
 function resetForm(){
@@ -54,6 +100,8 @@ function resetErrors() {
   errorMessages.forEach(message => message.style.display = 'none');
 }
 
+/*************************************** ouverture modale ***********************************************/
+
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -62,6 +110,8 @@ function launchModal() {
   resetForm(); // Réinitialise le formulaire avant de l'afficher
   modalbg.style.display = "block";
 }
+
+/********************************************Les fermetures modale**************************************** */
 
 // Close modal form with X
 function closeModal() {
@@ -83,6 +133,7 @@ function closeMsg() {
 }
 closeMsg();
 
+/********************************************La soumission du formulaire******************************** */
 
 //Validation du formulaire
 function validateForm(event) {

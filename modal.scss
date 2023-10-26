@@ -669,7 +669,6 @@ margin: 0 20px;
         padding: 0;
     }
 
-    /* Ajoutez ces styles pour ouvrir le menu au survol de l'icône */
     .topnav.responsive:hover .main-navbar {
         display: flex;
         animation: slideIn 0.3s forwards;
@@ -723,11 +722,13 @@ margin: 0 20px;
     html {
         min-width:320px;
     }
+
     body {
         width:100%;
         min-width: 320px;
         margin:0 auto;
     }
+    
     .topnav {
         width:90%;
         margin:0 auto;
@@ -736,6 +737,7 @@ margin: 0 20px;
         align-items: flex-start;
         justify-content: space-between;
     }
+
     span {
         font-size: 1rem;
     }
@@ -743,6 +745,7 @@ margin: 0 20px;
     .topnav a {
         display: none;
     }
+
     .topnav a.icon {
         float: right;
         display: block;
