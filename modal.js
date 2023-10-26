@@ -63,6 +63,16 @@ checkboxesRadios.forEach((input) => {
   });
 });
 
+const firstField = document.querySelector('input[type="text"]');
+// Ajout gestionnaire d'événement "change" au champs prénom
+firstField.forEach((input) => {
+  input.addEventListener('change', () => {
+        // Eface le msg d'erreur des que le prénom est modifié
+    const messageErrorFirst = document.getElementById('error-first');
+    messageErrorFirst.style.display="none";
+  });
+});
+
 
 // DOM Elements
 const modalbg = document.querySelector(".bground");
