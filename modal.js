@@ -21,7 +21,7 @@ buttons.forEach(btn => {
     btn.addEventListener('click', activeBtn);
 });
 
-/************************************Gestion focus clavier remplissage des champs***************************** */
+/************************************Gestion clavier remplissage des champs***************************** */
 
 // Récupération des champs du formulaire dans un tableau
 const formFields = document.querySelectorAll('input[type="text"], input[type="email"], input[type="date"], input[type="number"]');
